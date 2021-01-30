@@ -83,7 +83,8 @@ For example an export might refer to data from the Environment spec:
 
 ```bash
 # Format based on environment {{env.<...>}}
-$ tk export exportDir environments/dev/ --format '{{env.metadata.labels.cluster}}/{{env.spec.namespace}}//{{.kind}}-{{.metadata.name}}'
+$ tk export exportDir environments/dev/ \
+  --format '{{env.metadata.labels.cluster}}/{{env.spec.namespace}}//{{.kind}}-{{.metadata.name}}'
 ```
 
 Even more advanced use cases allow you to export multiple environments in a single execution:
